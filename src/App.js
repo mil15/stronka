@@ -25,16 +25,24 @@ else{
 }
 
 renderTableHeader=()=> {
-return Object.keys(this.state.users[0]).map(attr =><th>
+return Object.keys(this.state.users[0]).map(attr =><th key={attr}>
 {attr.toUpperCase()}
   </th>
+
+
+
 )
 }
 renderTableRows=()=>{
 return this.state.users.map(user =>{
   return(
     <tr>
-
+<td>{user.id}</td>
+<td>{user.title}</td>
+<td>{user.description}</td>
+<td>{user.is_featured}</td>
+<td>{user.gallery_title}</td>
+<td>{user.type}</td>
 
     </tr>
   )
